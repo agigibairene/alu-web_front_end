@@ -1,4 +1,4 @@
-/* SUMMARY
+/* IN SHORT
 1. GLOBAL
 2. LAYOUT
 3. SECTION
@@ -375,6 +375,7 @@
   
   .section-hero .section-body {
     padding: 10rem 4rem;
+    min-height: 35vh;
   }
   
   .section-hero .section-category {
@@ -391,7 +392,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: 35vh;
+    min-height: 50vh;
   }
   /* Section Latest news
       ============================= */
@@ -551,6 +552,10 @@
     background-size: 150rem 100rem;
     background-position: 50% 0;
   }
+  .hero-homepage {
+    background-position: 65% 8rem;
+    background-size: 90rem auto;
+  }
   
   .hero-article::before {
     content: '';
@@ -573,6 +578,9 @@
     position: relative;
     padding: 7rem 0 0;
     z-index: 2;
+  }
+  .section-hero .section-inner{
+    min-height: 35vh;
   }
   
   .main-article {

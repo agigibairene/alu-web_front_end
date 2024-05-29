@@ -1,4 +1,4 @@
-/* SUMMARY
+/* IN SHORT
 1. GLOBAL
 2. LAYOUT
 3. SECTION
@@ -167,6 +167,10 @@
   
   /* Helpers
       ============================= */
+  main img {
+    width: 100%;
+    height: auto;
+  }
   
   .visually-hidden:not(:focus):not(:active) {
     position: absolute !important;
@@ -176,11 +180,11 @@
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
   }
-  
-  img {
+  .main img{
     width: 100%;
     height: auto;
   }
+  
   /*** 2. LAYOUT ***/
   
   /* Layout
@@ -216,28 +220,43 @@
   .col-1-2 {
     width: calc((100% / 2) - 2rem);
   }
-
-  @media  (max-width: 767px){
-    :root{
-        --section-padding: 5rem 1.5rem;
-        --section-body-padding: 2rem 0 0;
+  
+  /* tablet / medium styles */
+  @media (max-width: 767px){
+    :root {
+      --section-padding: 5rem 1.5rem;
+      --section-body-padding: 2rem 0 0;
     }
 
-    ul.row, .row{
-        flex-direction: column;
-        margin: 0;
+    ul.row, .row {
+      flex-direction: column;
+      margin: 0;
     }
-
     [class*='col-'] {
-        margin: 0 0 3rem 0;
+      margin: 0 0 3rem 0;
     }
-
-    .col-1-3, .col-1-2{
-        width: 100%;
+    .col-1-3, .col-1-3 {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    :root {
+      --section-padding: 5rem 1.5rem;
+      --section-body-padding: 2rem 0 0;
+    }
+    ul.row, .row {
+      flex-direction: column;
+      margin: 0;
+    }
+    [class^='col-'] {
+      margin: 0 0 3rem 0;
+    }
+    .col-1-3, .col-1-3 {
+      width: 100%;
     }
 
   }
-  
+
   /* Navbar
       ============================= */
   
@@ -286,14 +305,21 @@
     background-color: var(--color-primary);
     width: 100%;
   }
-
-  
-  @media (max-width: 767px){
-    .navbar-menu{
-        display: none;
+  @media screen and (max-width: 767px) {
+    .navbar-menu {
+      display: none;
+      
     }
+
   }
   
+  /* tablet / medium styles */
+  @media (max-width: 767px){
+    .navbar-menu {
+      display: none;
+    }
+  }
+
   /* Header
       ============================= */
   
@@ -427,16 +453,22 @@
   }
   /* Section Latest news
       ============================= */
+  /* tablet / medium styles */
+  @media (max-width: 767px){
+    .section-latest-news .row {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .section-latest-news .row {
+      flex-direction: column;
+    }
+  }
   
   .section-latest-news .row {
     flex-direction: row-reverse;
   }
   
-  @media  (max-width: 767px){
-    .section-latest-news .row {
-        flex-direction: column;
-    }
-  }
   /* Section SERVICES
       ============================= */
   
